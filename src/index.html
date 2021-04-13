@@ -7,24 +7,47 @@
   <title>Counter</title>
 </head>
 <body>
-  <div class="main-container">
-      <section class="tools">
-      <button class="button">New</button>
-      <button class="button">Restart</button>
-      <button class="button">History</button>
+  <header class="header dropdown">
+      <input type="checkbox" id="dropdown-toggle">
+      <label for=dropdown-toggle class="button toggle-button"><span>&#9776;</span></label>
+      <nav class="toolbar dropdown-content">
+        <button class="button">New</button>
+        <button class="button">Restart</button>
+        <button class="button">History</button>
+      </nav>
+  </header>
+  <section id="board" class="board">
+    <p id="counter">0</p>
   </section>
-  <h1 class="title">Counter</h1>
-  <section id="counter" class="board">
-      <p>0</p>
+  <section class="controlers">
+    <button id="plus" class="button circle-button">+</button>
+    <button id="less" class="button circle-button">-</button>
+    <label class="negative">
+      <input type="checkbox" id="allow-negatives">
+      <span>Allow negatives</span>
+    </label>
   </section>
-  <section>
-      <button class="circle-button">+</button>
-      <button class="circle-button">-</button>
-      <div class="negative">
-          <input type="checkbox" id="count-negatives" />
-          <label for="count-negatives">Negatives</label>
-      </div>
-  </section>
-  </div>
+  <footer class="footer">
+    <ul class="social-network">
+      <li class="list-item">
+        <a href="#" class="link">
+          <img src="./assets/icons/icon-github.svg" class="icon">
+          <span>GitHub</span>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="#" class="link">
+          <img src="./assets/icons/icon-linkedin.svg" class="icon">
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="#" class="link">
+          <img src="./assets/icons/icon-twitter.svg" class="icon">
+          <span>Twitter</span>
+        </a>
+      </li>
+    </ul>
+  </footer>
 </body>
 </html>
