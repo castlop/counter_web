@@ -59,17 +59,17 @@ module.exports = {
           minimize: false
         }
       },
-      // {
-      //   test: /\.(png|jpg|jpeg|gif|svg)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         esModule: false
-      //       }
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false
+            }
+          }
+        ]
+      },
     ]
   },
   plugins: [
@@ -83,11 +83,11 @@ module.exports = {
       filename: '[name].[contenthash].css',
       ignoreOrder: false
     }),
-    // new CopyPlugin({
-    //     patterns: [
-    //       {from: 'src/assets', to: 'assets/' }
-    //     ],
-    //   }
-    // ),
+    new CopyPlugin({
+        patterns: [
+          {from: 'src/assets', to: 'assets/' }
+        ],
+      }
+    ),
   ]
 }
