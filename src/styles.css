@@ -66,3 +66,63 @@ body {
 .footer {
   grid-area: footer;
 }
+
+/* Generics
+---------------------------------------------------------------------*/
+
+.button {
+  background: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  color: var(--color-primary);
+  display: block;
+  font-family: var(--type-common);
+  font-size: var(--font-size-regular);
+  margin: var(--space-margin);
+  outline: none;
+  padding: var(--space-padding);
+}
+
+.button:hover {
+  background: var(--color-default-dark);
+  color: var(--color-default-light);
+}
+
+.button:active {
+  box-shadow: 0 0 2px var(--color-default-dark),
+        inset 0 0 2px var(--color-default-light);
+}
+
+.circle-button {
+  border-radius: var(--radius-circle);
+  height: calc( 2* var(--radius-circle) );
+  width: calc( 2 * var(--radius-circle) );
+}
+
+.link {
+  color: var(--color-primary);
+  font-size: var(--font-size-small);
+  font-family: var(--type-common);
+  text-decoration: none;
+}
+
+.link:hover {
+  box-shadow: 0 0 0 red;
+  color: var(--color-default-dark);
+}
+
+.link:hover > .icon {
+  transform: scale(1.5);
+}
+
+.icon {
+  display: inline-block;
+  height: var(--font-size-small);
+  width: var(--font-size-small);
+}
+
+.list-item {
+  display: block;
+  list-style: none;
+  margin: var(--space-margin);
+}
