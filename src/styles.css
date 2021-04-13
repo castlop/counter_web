@@ -33,3 +33,36 @@
   margin: 0;
   padding: 0;
 }
+
+/* Layout
+---------------------------------------------------------------------*/
+
+body {
+  background: var(--color-default-light);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr 1fr auto;
+  grid-template-areas: 
+  "header"
+  "board"
+  "controlers"
+  "footer"
+  ;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+.board {
+  grid-area: board;
+}
+
+.controlers {
+  grid-area: controlers;
+}
+
+.footer {
+  grid-area: footer;
+}
