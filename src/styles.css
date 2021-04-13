@@ -1,0 +1,25 @@
+/* Fundations
+---------------------------------------------------------------------*/
+:root {
+  --color-default-dark: #31352E;
+  --color-default-light: #EBEBE8;
+  --color-secondary: #D1E2C4;
+  --color-primary: #778A35;
+
+  --font-header-regular: 25px;
+  --font-header-big: 30px;
+
+  --font-size-small: 12px;
+  --font-size-regular: 16px;
+  --font-size-big: 20px;
+  --font-size-large: 10rem;
+
+  --type-common: Helvetica, Arial, sans-serif;
+
+  --radius: 10px;
+  --radius-circle: 25px;
+
+  --space-margin: 10px;
+  --space-padding: 5px;
+
+}
