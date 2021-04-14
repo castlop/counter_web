@@ -28,6 +28,13 @@ const events = () => {
     counterHtml.innerText = counter.value;
   });
 
+  negativeToggle.addEventListener('change', () => {
+    if (!negativeToggle.checked) {
+      counter.value = (counter.value > 0) ? counter.value : 0;
+      counterHtml.innerText = counter.value;
+    }
+  });
+  
 }
 
 export const init = () => {
