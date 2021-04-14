@@ -143,3 +143,14 @@ body {
 .toolbar > * {
   flex: 1 0 auto;
 }
+
+/* Board
+---------------------------------------------------------------------*/
+
+.board {
+  color: var(--color-default-dark);
+  display: block;
+  font-size: var(--font-size-large);
+  font-family: var(--type-common);
+  text-align: center;
+}
