@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     filename: 'main.[contenthash].js',
-    clean: true,
+    // clean: true,
   },
   module: {
     rules: [
