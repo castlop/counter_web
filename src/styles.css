@@ -177,3 +177,16 @@ body {
   text-align: center;
 }
 
+/* Footer
+---------------------------------------------------------------------*/
+
+.footer {
+  background: var(--color-secondary);
+}
+
+.social-network {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
