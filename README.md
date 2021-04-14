@@ -1,15 +1,24 @@
-# Webpack Starter Pack
+# Counter Web
 
-Basic configuration for webpack-based projects.
+## Description
+Web application to count whatever you want!
 
-### Installation Notes
+Try the app [here](https://castlop.github.io/counter_web).
 
-Remember to rebuild `node_modules` by running `npm` command in the same level-folder of `package.json` file:
+## Technologies
+* HTML
+* CSS
+* JavaScript
+* Webpack
+
+## Install on your PC
+
+Simply run `npm install` to download all packages described in the `package.json`.
 ```
 npm install
 ```
 
-And to rebuild `bundle` for production:
+Then you can use the Webpack DevServer by running the following command.
 ```
-npm run build:prod
+npm start
 ```
