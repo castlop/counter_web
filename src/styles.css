@@ -190,3 +190,33 @@ body {
   flex-flow: row wrap;
   justify-content: center;
 }
+
+/* Behaviors
+---------------------------------------------------------------------*/
+
+.dropdown > input,
+.dropdown > label {
+ display: none;
+}
+
+/* Media queries
+---------------------------------------------------------------------*/
+
+@media screen and (max-width: 250px) {
+  .dropdown-content {
+    display: none;
+  }
+
+  .dropdown > label {
+    display: inline-block;
+  }
+
+  .dropdown > input:checked ~ .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown > input:checked ~ label {
+    text-align: right;
+    padding-right: var(--space-padding);
+  }
+}
