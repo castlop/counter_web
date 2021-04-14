@@ -154,3 +154,26 @@ body {
   font-family: var(--type-common);
   text-align: center;
 }
+
+/* Controlers
+---------------------------------------------------------------------*/
+
+.controlers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.controlers > * {
+  flex: 0 0 auto;
+}
+
+.controlers > .negative {
+  flex: 1 0 100%;
+}
+
+.negative {
+  font-size: var(--font-size-small);
+  text-align: center;
+}
+
