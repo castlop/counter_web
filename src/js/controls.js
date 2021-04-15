@@ -1,8 +1,7 @@
 import {counter} from '../index.js';
 
 
-const counterHtml    = document.querySelector('#counter'),
-      plusButton     = document.querySelector('#plus'),
+const plusButton     = document.querySelector('#plus'),
       lessButton     = document.querySelector('#less'),
       negativeToggle = document.querySelector("#allow-negatives");
 
@@ -10,7 +9,6 @@ const counterHtml    = document.querySelector('#counter'),
 const events = () => {
   plusButton.addEventListener('click', () => {
     counter.plusOne();
-    counterHtml.innerText = counter.value;
   });
 
   lessButton.addEventListener('click', () => {
@@ -19,14 +17,10 @@ const events = () => {
     } else if (negativeToggle.checked) {
       counter.lessOne();
     }
-    counterHtml.innerText = counter.value;
   });
 
   negativeToggle.addEventListener('change', () => {
-    if (!negativeToggle.checked) {
-      counter.value = (counter.value > 0) ? counter.value : 0;
-      counterHtml.innerText = counter.value;
-    }
+    if (!negativeToggle.checked && counter.value < 0) counter.reset();
   });
   
 }

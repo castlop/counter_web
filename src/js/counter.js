@@ -1,6 +1,10 @@
 export class Counter {
+
   constructor(start_value = 0) {
-    this.value = start_value;
+    this._value   = start_value;
+    this._itemDom = document.querySelector('#counter');
+
+    this.updateDom();
   }
 
   get value() {
@@ -15,15 +19,26 @@ export class Counter {
     }
   }
 
+  get itemDom() {
+    return this._itemDom;
+  }
+
+  updateDom() {
+    this.itemDom.innerText = this.value;
+  }
+
   plusOne() {
     this.value++;
+    this.updateDom();
   }
 
   lessOne() {
     this.value--;
+    this.updateDom();
   }
 
   reset() {
     this.value = 0;
+    this.updateDom();
   }
 }
