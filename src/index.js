@@ -3,6 +3,6 @@ import {Counter} from './js/counter.js';
 
 import './styles.css';
 
-export let counter = new Counter();
+export const counter = new Counter();
 
 init();
