@@ -1,4 +1,4 @@
-import {Counter} from './counter.js';
+import {counter} from '../index.js';
 
 
 const counterHtml    = document.querySelector('#counter'),
@@ -6,12 +6,6 @@ const counterHtml    = document.querySelector('#counter'),
       lessButton     = document.querySelector('#less'),
       negativeToggle = document.querySelector("#allow-negatives");
 
-let counter;
-
-
-const createCounter = () => {
-  return new Counter();
-}
 
 const events = () => {
   plusButton.addEventListener('click', () => {
@@ -38,6 +32,5 @@ const events = () => {
 }
 
 export const init = () => {
-  counter = createCounter();
   events();
 }
