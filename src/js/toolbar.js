@@ -1,4 +1,5 @@
 import {counter} from '../index.js';
+import {bgDisabled} from '../components/background-disabled/background-disabled';
 
 
 const resetButton = document.querySelector('#reset-button');
@@ -11,7 +12,7 @@ const eventsToolbar = () => {
   });
 
   saveButton.addEventListener('click', () => {
-    console.log('Save button');
+    bgDisabled.classList.toggle('bg-disabled-hidden');
   });
 
 }

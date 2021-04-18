@@ -1,0 +1,10 @@
+.bg-disabled {
+  background: var(--color-default-dark);
+  display: grid;
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
+}
+
+.bg-disabled-hidden {
+  display: none;
+}
