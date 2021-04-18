@@ -4,7 +4,13 @@ import {Counter} from './js/counter.js';
 
 import './styles.css';
 
-export const counter = new Counter();
+
+const counter = new Counter();
+
+
+export {
+  counter
+}
 
 init();
 initToolbar();
