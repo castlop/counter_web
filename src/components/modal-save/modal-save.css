@@ -1,0 +1,24 @@
+.modalSave {
+  align-items: center;
+  align-self: center;
+  border: var(--color-default-dark);
+  border-radius: var(--radius);
+  background: var(--color-default-light);
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  flex-flow: row wrap;
+  padding: 0 2rem;
+  width: 80%;
+}
+
+.modalSave > input,
+.modalSave > label {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.modalSave > label {
+  font-family: Helvetica;
+  margin: var(--space-margin);
+}
