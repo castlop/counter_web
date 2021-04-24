@@ -1,5 +1,4 @@
-import {counter} from '../index.js';
-import {bgDisabled} from '../components/background-disabled/background-disabled';
+import {counter, bgDisabled} from '../index.js';
 import {modalSave} from '../components/modal-save/modal-save';
 
 const resetButton = document.querySelector('#reset-button');
