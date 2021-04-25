@@ -7,13 +7,15 @@ import './styles.css';
 
 
 const counter = new Counter();
+const counterList = [];
 const container = document.body;
 const bgDisabled = createBgDisabled(container);
 
 
 export {
   counter,
-  bgDisabled
+  bgDisabled,
+  counterList
 }
 
 init();
