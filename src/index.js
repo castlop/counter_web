@@ -1,7 +1,7 @@
 import {init} from './js/controls.js';
 import {init as initToolbar} from './js/toolbar.js';
 import {Counter} from './js/counter.js';
-import {createBgDisabled} from './components/background-disabled/background-disabled';
+import {createBgDisabled} from './components/background-disabled/';
 
 import './styles.css';
 
