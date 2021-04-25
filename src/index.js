@@ -7,7 +7,8 @@ import './styles.css';
 
 
 const counter = new Counter();
-const bgDisabled = createBgDisabled(document.body);
+const container = document.body;
+const bgDisabled = createBgDisabled(container);
 
 
 export {
