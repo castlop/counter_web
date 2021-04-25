@@ -11,9 +11,9 @@ const eventsToolbar = () => {
   });
 
   saveButton.addEventListener('click', () => {
-    bgDisabled.classList.toggle('bg-disabled-hidden');
-    if (!bgDisabled.contains(modalSave)) {
-      bgDisabled.appendChild(modalSave);
+    bgDisabled.switchDisplay();
+    if (!bgDisabled.haveComponent(modalSave)) {
+      bgDisabled.appendComponent(modalSave);
     }
   });
 
