@@ -7,7 +7,13 @@ const saveCounter = (description, counterValue) => {
   localStorage.setItem('CounterApp', JSON.stringify(counterList));
 }
 
+const loadCounters = () => {
+  const retrievedData = JSON.parse(localStorage.getItem('CounterApp'));
+  return (retrievedData) ? retrievedData : [];
+}
+
 
 export {
-  saveCounter
+  saveCounter,
+  loadCounters
 }
