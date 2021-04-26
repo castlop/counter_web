@@ -1,10 +1,12 @@
-import {counter, bgDisabled} from '../index.js';
+import {counter, bgDisabled, counterList} from '../index.js';
 import {saveCounter} from './storage';
 import {modalSave} from '../components/modal-save/modal-save';
+import {modalLoad, createOptionsLoaded} from '../components/modal-load/';
+
 
 const resetButton = document.querySelector('#reset-button');
 const saveButton  = document.querySelector('#save-button');
-
+const loadButton  = document.querySelector('#load-button');
 
 
 const eventsToolbar = () => {
@@ -17,6 +19,15 @@ const eventsToolbar = () => {
     if (!bgDisabled.haveComponent(modalSave)) {
       bgDisabled.appendComponent(modalSave);
     }
+  });
+
+  loadButton.addEventListener('click', (event) => {
+    bgDisabled.switchDisplay();
+    if (!bgDisabled.haveComponent(modalLoad)) {
+      bgDisabled.appendComponent(modalLoad);
+    }
+    const catalog     = modalLoad.querySelector('#catalog');
+    catalog.innerHTML = createOptionsLoaded(counterList);
   });
 
   modalSave.addEventListener('click', (event) => {
