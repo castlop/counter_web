@@ -15,6 +15,7 @@ const eventsToolbar = () => {
   });
 
   saveButton.addEventListener('click', () => {
+    bgDisabled.clearComponents();
     bgDisabled.switchDisplay();
     if (!bgDisabled.haveComponent(modalSave)) {
       bgDisabled.appendComponent(modalSave);
@@ -22,6 +23,7 @@ const eventsToolbar = () => {
   });
 
   loadButton.addEventListener('click', (event) => {
+    bgDisabled.clearComponents();
     bgDisabled.switchDisplay();
     if (!bgDisabled.haveComponent(modalLoad)) {
       bgDisabled.appendComponent(modalLoad);
