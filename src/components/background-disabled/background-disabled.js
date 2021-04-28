@@ -21,7 +21,10 @@ class BgDisabled {
   appendComponent(component) {
     this._itemHtml.append(component);
   }
-  
+
+  clearComponents() {
+    this._itemHtml.textContent = '';
+  }
 
   haveComponent(component) {
     return this._itemHtml.contains(component);
