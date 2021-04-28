@@ -17,9 +17,11 @@ const createModalLoad = (options) => {
 
 
 const createOptionsLoaded = options => {
-  return options
-          .map(option => `<option value="${option.description}">${option.description}: ${option.counterValue}</option>`)
-          .join('\n');
+  return (!options.length)
+            ? '<option value ="" selected>-- No counters found --</option>'
+            : options
+              .map(option => `<option value="${option.description}">${option.description}: ${option.counterValue}</option>`)
+              .join('\n');
 }
 
 
