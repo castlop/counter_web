@@ -1,4 +1,4 @@
-const createModalLoad = (options) => {
+const createModalLoad = () => {
   
   const htmlTemplate = `
     <label for="catalog">Choose one counter</label>
