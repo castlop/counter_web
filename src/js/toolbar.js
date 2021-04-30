@@ -2,6 +2,7 @@ import {counter, bgDisabled, counterList} from '../index.js';
 import {saveCounter} from './storage';
 import {modalSave} from '../components/modal-save/modal-save';
 import {modalLoad, createOptionsLoaded} from '../components/modal-load/';
+import {extractCounterValue} from './helpers';
 
 
 const resetButton = document.querySelector('#reset-button');
@@ -41,6 +42,17 @@ const eventsToolbar = () => {
     if (event.target.innerText === 'Save') {
       saveCounter(inputField.value, counter.value);
       inputField.value = '';
+      bgDisabled.switchDisplay();
+    }
+  });
+
+  modalLoad.addEventListener('click', (event) => {
+    if (event.target.innerText === 'Load') {
+      const selectItem = modalLoad.querySelector('#catalog');      
+      const optionSelected = selectItem.options[selectItem.selectedIndex].text;
+      
+      counter.value = extractCounterValue(optionSelected);
+      counter.updateDom();
       bgDisabled.switchDisplay();
     }
   });
